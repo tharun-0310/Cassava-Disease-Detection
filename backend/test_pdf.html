@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test PDF Generation</title>
+</head>
+<body>
+    <h1>Test PDF Generation</h1>
+    <input type="file" id="fileInput" accept="image/*">
+    <button onclick="testPDF()">Generate PDF Report</button>
+    <div id="result"></div>
+
+    <script>
+        async function testPDF() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('Please select an image first');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                document.getElementById('result').innerHTML = 'Generating PDF...';
+                
+                const response = await fetch('http://localhost:8000/generate-report', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Disease_Report.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    document.getElementById('result').innerHTML = 'PDF downloaded successfully!';
+                } else {
+                    const error = await response.text();
+                    document.getElementById('result').innerHTML = 'Error: ' + error;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

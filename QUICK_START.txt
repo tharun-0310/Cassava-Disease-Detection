@@ -1,0 +1,108 @@
+╔══════════════════════════════════════════════════════════════╗
+║     CASSAVA DISEASE DETECTION - QUICK START GUIDE           ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 PREREQUISITES
+  ✓ Python 3.8+ installed
+  ✓ Node.js 14+ installed
+  ✓ Model file: FusionNet/fusionnet_best.pth
+
+🚀 INSTALLATION (First Time Only)
+  
+  Windows:
+    1. Double-click: INSTALL.bat
+    2. Wait for installation to complete
+  
+  Manual:
+    cd backend
+    pip install -r requirements.txt
+    cd ../frontend
+    npm install
+
+▶️ RUNNING THE APPLICATION
+
+  Windows:
+    Double-click: START_APP.bat
+  
+  Manual:
+    Terminal 1:
+      cd backend
+      python run.py
+    
+    Terminal 2:
+      cd frontend
+      npm start
+
+🌐 ACCESS THE APP
+  Frontend: http://localhost:3000
+  Backend API: http://localhost:8000
+  API Docs: http://localhost:8000/docs
+
+🎯 HOW TO USE
+
+  1. Upload Image
+     - Drag & drop OR click to browse
+     - Supported: JPG, PNG, BMP, TIFF (max 10MB)
+  
+  2. Analyze
+     - Click "Analyze Image" button
+     - Wait for results (2-5 seconds)
+  
+  3. Generate Report (Optional)
+     - Click "Generate Report" button
+     - PDF downloads automatically
+     - Saved in: backend/reports/
+
+✨ NEW FEATURES
+
+  🔍 Cassava Leaf Validation
+     - Automatically checks if image is cassava leaf
+     - Shows error if not cassava
+  
+  📄 PDF Report Generation
+     - Comprehensive disease information
+     - Treatment plans and schedules
+     - Farmer-friendly recommendations
+
+🐛 TROUBLESHOOTING
+
+  Backend won't start:
+    → Check Python installed: python --version
+    → Install dependencies: pip install -r backend/requirements.txt
+  
+  Frontend won't start:
+    → Check Node.js installed: node --version
+    → Install dependencies: npm install
+  
+  "Module not found" error:
+    → cd backend
+    → pip install -r requirements.txt
+  
+  "Model not found" error:
+    → Ensure fusionnet_best.pth exists in FusionNet/ folder
+  
+  Port already in use:
+    → Close other instances
+    → Or change port in code
+
+📚 MORE HELP
+  - Detailed Guide: SETUP_GUIDE.md
+  - What's New: WHATS_NEW.md
+  - Full README: README.md
+
+🎓 SUPPORTED DISEASES
+  1. Cassava Bacterial Blight (CBB)
+  2. Cassava Brown Streak Disease (CBSD)
+  3. Cassava Green Mottle (CGM)
+  4. Cassava Mosaic Disease (CMD)
+  5. Healthy
+
+💡 TIPS
+  ✓ Use clear, well-lit photos
+  ✓ Capture entire leaf
+  ✓ Plain background works best
+  ✓ Natural daylight is ideal
+
+═══════════════════════════════════════════════════════════════
+Ready to detect cassava diseases! 🌿
+═══════════════════════════════════════════════════════════════

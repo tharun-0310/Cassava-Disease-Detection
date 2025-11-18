@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# PyTorch Models (LARGE - DO NOT UPLOAD)
+*.pth
+*.pt
+models/
+*.pkl
+
+# Dataset (LARGE - DO NOT UPLOAD)
+Dataset/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+
+# Node modules
+node_modules/
+package-lock.json
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log
+
+git clone https://github.com/tharun-0310/Capstone-Prj.git
+fatal: destination path 'Capstone-Prj' already exists and is not an empty directory.        
